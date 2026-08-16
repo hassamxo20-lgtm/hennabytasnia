@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLARY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Roboto, Arial;
+            background-color: #343333;
+        }
+
+
+        /* NAV BAR CODE */
+
+        .nav-item {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 800;
+            color: azure;
+        }
+
+        .nav {
+            margin: 10px 20px;
+            background-color: #343333;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 2px solid #e9e5e5;
+            padding-bottom: 15px;
+
+        }
+
+        nav img {
+            border-radius: 50%;
+            width: 80px;
+        }
+
+        /* GALLARY CODE */
+
+        #gallary {
+            margin-top: 10px;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            flex-wrap: wrap;
+
+            border: 5px solid rgb(53, 17, 17);
+            border-radius: 20px;
+            padding-top: 20px;
+        }
+
+        .pics-gallary {
+            width: 200px;
+
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+
+        }
+
+        .pics-gallary img {
+            width: 100%;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 50px;
+
+            transition: transform 0.4s ease;
+        }
+
+        .pics-gallary img:hover {
+            transform: scale(1.05);
+            border: 2.5px solid rgb(255, 255, 255);
+        }
+
+        /* GALLARY KEYFRAMES */
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+                scale: 0.5;
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+                scale: 1;
+
+            }
+        }
+
+        /* WELCOME TEXT CODE */
+
+        .g-text {
+            font-size: 20px;
+            color: whitesmoke;
+            font-weight: 600;
+        }
+
+        .welcome-text {
+            margin: 0 50px 0 50px;
+            line-height: 30px;
+            word-spacing: 5px;
+        }
+
+        .welcome-text span b {
+            color: #ff0000d2;
+            font-weight: bolder;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+
+
+        /* FOOTER SECTION CODE*/
+
+        footer {
+            background-color: whitesmoke;
+            color: black;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            text-decoration: none;
+            background-color: whitesmoke;
+        }
+
+        footer b {
+            background-color: whitesmoke;
+            font-size: 20px;
+        }
+
+
+
+
+
+
+
+        /* =========================
+   GALLERY MOBILE 2 COLUMNS
+========================= */
+
+#gallary {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+
+    #gallary {
+        gap: 100px;
+        padding: 15px 8px;
+        box-sizing: border-box;
+    }
+
+    .pics-gallary {
+        width: calc(50% - 8px);
+        max-width: 170px;
+    }
+
+    .pics-gallary img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #gallary {
+        gap: 10px;
+        padding: 12px 6px;
+    }
+
+    .pics-gallary {
+        width: calc(50% - 6px);
+        max-width: 145px;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <nav>
+            <img src="henna.pics/logo.jpg" alt="">
+            <a class="nav-item" href="index.html">BACK TO HOME</a>
+        </nav>
+    </div>
+
+    <section id="gallary">
+
+        <div class="welcome-text">
+            <span class="g-text"><b>WELCOME</b> TO <b>HENNA BY TASNIA</b> GALLARY</span>
+        </div>
+
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic1.jpg"><img class="img1" src="henna.pics/pic1.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic2.jpg"><img class="img1" src="henna.pics/pic2.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic3.jpg"><img class="img1" src="henna.pics/pic3.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic4.jpg"><img class="img1" src="henna.pics/pic4.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic5.jpg"><img class="img1" src="henna.pics/pic5.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic6.jpg"><img class="img1" src="henna.pics/pic6.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic7.jpg"><img class="img1" src="henna.pics/pic7.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic8.jpg"><img class="img1" src="henna.pics/pic8.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic9.jpg"><img class="img1" src="henna.pics/pic9.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic10.jpg"><img class="img1" src="henna.pics/pic10.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic11.jpg"><img class="img1" src="henna.pics/pic11.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic12.jpg"><img class="img1" src="henna.pics/pic12.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic13.jpg"><img class="img1" src="henna.pics/pic13.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic14.jpg"><img class="img1" src="henna.pics/pic14.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic15.jpg"><img class="img1" src="henna.pics/pic15.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic16.jpg"><img class="img1" src="henna.pics/pic16.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic17.jpg"><img class="img1" src="henna.pics/pic17.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic18.jpg"><img class="img1" src="henna.pics/pic18.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic19.jpg"><img class="img1" src="henna.pics/pic19.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic20.jpg"><img class="img1" src="henna.pics/pic20.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic21.jpg"><img class="img1" src="henna.pics/pic21.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic22.jpg"><img class="img1" src="henna.pics/pic22.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic23.jpg"><img class="img1" src="henna.pics/pic23.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic24.jpg"><img class="img1" src="henna.pics/pic24.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic25.jpg"><img class="img1" src="henna.pics/pic25.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic26.jpg"><img class="img1" src="henna.pics/pic26.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic28.jpg"><img class="img1" src="henna.pics/pic28.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic29.jpg"><img class="img1" src="henna.pics/pic29.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic30.jpg"><img class="img1" src="henna.pics/pic30.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic31.jpg"><img class="img1" src="henna.pics/pic31.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic32.jpg"><img class="img1" src="henna.pics/pic32.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic33.jpg"><img class="img1" src="henna.pics/pic33.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic34.jpg"><img class="img1" src="henna.pics/pic34.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic35.jpg"><img class="img1" src="henna.pics/pic35.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic36.jpg"><img class="img1" src="henna.pics/pic36.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic37.jpg"><img class="img1" src="henna.pics/pic37.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic38.jpg"><img class="img1" src="henna.pics/pic38.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic39.jpg"><img class="img1" src="henna.pics/pic39.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic40.jpg"><img class="img1" src="henna.pics/pic40.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic41.jpg"><img class="img1" src="henna.pics/pic41.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+        <div class="pics-gallary">
+            <a target="_blank" href="henna.pics/pic42.jpg"><img class="img1" src="henna.pics/pic42.jpg" alt="" loading="lazy" decoding="async"></a>
+        </div>
+
+
+    </section>
+
+
+    <footer>
+        <b>henna.by_tasnia</b><br> Thanks for visiting our website
+        contact us for more info: <br> <a class="contact-num" href="https://wa.me/8801345189099">0134-5189099</a>
+    </footer>
+
+</body>
+
+</html>
