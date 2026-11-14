@@ -71,13 +71,15 @@
         }
 
         .pics-gallary {
-            width: 200px;
+    width: 200px;
 
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
+    transform-origin: center;
+    backface-visibility: hidden;
 
-        }
+    animation: appear linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
 
         .pics-gallary img {
             width: 100%;
